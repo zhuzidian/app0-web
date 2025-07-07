@@ -32,19 +32,17 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 </script>
 
 <template>
-  <UContainer class="flex items-center justify-center pt-8">
-    <UCard class="w-full max-w-sm">
-      <UForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
-        <UFormField label="ログインID" name="username">
-          <UInput v-model="state.username" class="w-full" />
-        </UFormField>
+  <UCard class="w-full max-w-sm">
+    <UForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
+      <UFormField label="ログインID" name="username">
+        <UInput v-model="state.username" class="w-full" />
+      </UFormField>
 
-        <UFormField label="パスワード" name="password">
-          <UInput v-model="state.password" type="password" class="w-full" />
-        </UFormField>
+      <UFormField label="パスワード" name="password">
+        <UInput v-model="state.password" type="password" class="w-full" />
+      </UFormField>
 
-        <UButton type="submit" block>ログイン</UButton>
-      </UForm>
-    </UCard>
-  </UContainer>
+      <UButton type="submit" block>ログイン</UButton>
+    </UForm>
+  </UCard>
 </template>
